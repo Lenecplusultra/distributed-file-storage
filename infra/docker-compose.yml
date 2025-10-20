@@ -2,10 +2,10 @@ version: "3.9"
 
 services:
   pgdata:
-    image: postgres:16
+    image: postgres:latest
     container_name: dfs_postgres
     ports:
-      - "5432:5432"
+      - "5434:5432"
     environment:
       POSTGRES_USER: dfs
       POSTGRES_PASSWORD: dfs
