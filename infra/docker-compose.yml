@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  pgdata:
+    image: postgres:16
+    container_name: dfs_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dfs
+      POSTGRES_PASSWORD: dfs
+      POSTGRES_DB: dfs
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+    
